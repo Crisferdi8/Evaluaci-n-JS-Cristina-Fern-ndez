@@ -37,13 +37,13 @@ const handleClick = (ev) => {
     const numberUser = parseInt(number.value);
     console.log(numberUser);
     if (randomNumber === numberUser) {
-        inputPista.innerHTML = ("Has ganado campeona");
+        msg.innerHTML = ("Has ganado campeona");
 
     } else if (numberUser < randomNumber) {
-        inputPista.innerHTML = ("Demasiado bajo");
+        msg.innerHTML = ("Demasiado bajo");
 
     } else (numberUser > randomNumber); {
-        inputPista.innerHTML = ("Demasiado alto");
+        msg.innerHTML = ("Demasiado alto");
     }
 }
 
