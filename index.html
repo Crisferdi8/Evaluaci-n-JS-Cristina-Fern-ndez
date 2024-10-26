@@ -11,14 +11,11 @@
 
 <body>
     <h1>Adivina el número</h1>
-    <p>Introduce aquí tu número</p>
-    <input class="js-input-number" type="number" id="Prueba">
+    <label for="Prueba" type="number">Introduce aquí tu número</label><br>
+    <input class="js-input-number" type="number" id="Prueba" placeholder="Introduce aquí tu número del 1 al 100">
     <button class="js-button" type="submit" for="Prueba">Prueba</button> <br>
-    <input id="pista" class="js-input-pista" type="text" placeholder="Pista: Escribe el número y dale a prueba"><br>
-    <label for="pista"></label>
-    <input id="intentos" class="js-input-intentos" type="text" placeholder="Número de intentos: 0">
-    <label for="intentos"></label>
-    <p class="message"></p>
+    <p class="js-input-pista">Pista:Escribe el número y dale a Prueba</p>
+    <p class="js-input-intentos">Número de intentos:0</p>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 

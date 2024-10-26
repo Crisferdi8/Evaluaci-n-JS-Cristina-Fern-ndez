@@ -19,33 +19,36 @@ const number = document.querySelector(".js-input-number");
 const button = document.querySelector(".js-button");
 const inputPista = document.querySelector(".js-input-pista");
 const inputIntentos = document.querySelector(".js-input-intentos");
-const msg = document.querySelector(".message");
+
+let attemps = 0;
+
 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-const max = 100;
-
-const randomNumber = getRandomNumber(max);
+const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
+
 
 const handleClick = (ev) => {
     ev.preventDefault();
-    const randomNumber = getRandomNumber(max);
-    console.log(randomNumber);
 
     const numberUser = parseInt(number.value);
     console.log(numberUser);
-    if (randomNumber === numberUser) {
-        msg.innerHTML = ("Has ganado campeona");
-
-    } else if (numberUser < randomNumber) {
-        msg.innerHTML = ("Demasiado bajo");
-
-    } else (numberUser > randomNumber); {
-        msg.innerHTML = ("Demasiado alto");
+    if (numberUser > 100 || numberUser < 1) {
+        inputPista.innerHTML = "El número debe estar entre 1 y 100";
     }
+    else if (randomNumber > numberUser) {
+        inputPista.innerHTML = "Pista: Demasiado bajo";
+    } else if (randomNumber < numberUser) {
+        inputPista.innerHTML = "Pista: Demasiado alto";
+    } else if (randomNumber === numberUser) {
+        inputPista.innerHTML = "Has ganado, campeona!!!!";
+    }
+    attemps = attemps + 1;
+    inputIntentos.innerHTML = "Número de intentos: " + attemps;
 }
+
 
 
 button.addEventListener('click', handleClick);
