@@ -8,8 +8,8 @@ ello copiad estas 3 líneas de código en vuestro fichero JS y no las modifiqué
 poder hacer pruebas.(Hecho)
 4. Al pulsar el botón de Prueba, acceder al contenido del input y mostrarlo en la consola.(hecho)
 5. Comparar el número que la jugadora ha escrito en el input con el número aleatorio, y pintar las pistas
-correspondientes en la pantalla.
-6. Actualizar el contador de intentos cada vez que la jugadora pruebe
+correspondientes en la pantalla.(hecho)
+6. Actualizar el contador de intentos cada vez que la jugadora pruebe(hecho)
 
 /*
 Seleccionar los elementos del html (inputs y botón)
